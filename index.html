@@ -18,6 +18,7 @@
   <link href="css/style.css" rel="stylesheet">
   <link href="css/ionicons/css/ionicons.min.css" rel="stylesheet">
   <link href="css/essential.css" rel="stylesheet">
+  <link href="css/loader.css" rel="stylesheet">
 
   <!-- For Mobiile Device css -->
   <link href="css/responsive.css" rel="stylesheet">
@@ -25,21 +26,29 @@
   <!-- My Icon -->
   <link rel="shortcut icon" href="images/logo2.png">
 
-
-  
+ 
 </head>
 
 <body>
-  
-  <div class="loader-wrapper">
-    <span class="loader">
-      <span class="loader-inner"></span></span>
-</div>
-
+   
+ 
 
    <!-- start section navbar -->
    <nav id="main-nav">
     <div class="row">
+         <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+      <div id="loader">
+          <div class="line-scale-pulse-out">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+          </div>
+      </div>
+  </div>
       <div class="container">
 
         <div class="logo">
@@ -480,6 +489,7 @@
         
 
       </div>
+     
 
   <!-- End section footer -->
 
@@ -492,18 +502,19 @@
   <script src="lib/magnific-popup/magnific-popup.min.js"></script>
   <script src="lib/isotope/isotope.pkgd.min.js"></script>
   
-  <script>
-    $(window).on("load",function(){
-      $(".loader-wrapper").fadeOut("slow");
-    });
-</script>
-
+  
+ 
+     
   <!-- Contact Form JavaScript File -->
   <script src="contactform/contactform.js"></script>
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
-
+ <script>
+    $(window).load(function() {
+      $('#preloader ').hide();
+    });
+  </script>
 </body>
 
 </html>
